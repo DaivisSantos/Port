@@ -53,7 +53,7 @@ body{
     gap: 40px;
 }
 .apresentacao__conteudo__titulo{
-    font-size: 1rem;
+    font-size: 2.5rem;
     font-family: 'Krona One', sans-serif;
 }
 .apresentacao__conteudo__texto {
@@ -134,8 +134,9 @@ body{
     }
 
     .cabecalho_menu{
-        padding-left: 5%;
-        justify-content: center;
+        justify-content:left;
+        display: flex; 
+        gap: 25px;
     }
 
     .apresentacao{
@@ -145,5 +146,9 @@ body{
 
     .apresentacao__conteudo{
         width: auto;
+    }
+
+    .apresentacao__conteudo__titulo{
+        font-size: 1.5rem;
     }
 }
