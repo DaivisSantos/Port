@@ -136,7 +136,11 @@ body{
     .cabecalho_menu{
         justify-content:left;
         display: flex; 
-        gap: 25px;
+        gap: 15px;
+    }
+
+    .cabecalho_menu_link{
+        font-size: 1.3rem;
     }
 
     .apresentacao{
