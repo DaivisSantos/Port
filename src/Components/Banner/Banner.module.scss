@@ -1,0 +1,150 @@
+@keyframes Pisca {
+  0%{ 
+    text-shadow:0 0 10px #a75920, /* Adiciona o brilho branco */
+                0 0 15px #a75920, /* Adiciona um brilho mais intenso */
+                0 0 20px #d37c3d, /* Adiciona um brilho ainda mais intenso */
+                0 0 25px #a75920, /* Adiciona um brilho mais intenso */
+                0 0 30px #a75920, /* Adiciona um brilho mais intenso */
+  }
+  25%{
+    text-shadow: none
+  }
+
+  50%{
+    text-shadow:0 0 10px #a75920, /* Adiciona o brilho branco */
+                0 0 15px #a75920, /* Adiciona um brilho mais intenso */
+                0 0 20px #d37c3d, /* Adiciona um brilho ainda mais intenso */
+                0 0 25px #a75920, /* Adiciona um brilho mais intenso */
+                0 0 30px #a75920, /* Adiciona um brilho mais intenso */
+  }
+
+  75%{
+    text-shadow: none
+  }
+
+  100%{
+    text-shadow:0 0 10px #a75920, /* Adiciona o brilho branco */
+                0 0 15px #a75920, /* Adiciona um brilho mais intenso */
+                0 0 20px #d37c3d, /* Adiciona um brilho ainda mais intenso */
+                0 0 25px #a75920, /* Adiciona um brilho mais intenso */
+                0 0 30px #a75920, /* Adiciona um brilho mais intenso */
+  }
+}
+
+@keyframes Girar {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes balanga {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25%{
+    transform: rotate(15deg);
+  }
+
+  50%{
+    transform: rotate(-15deg);
+  } 
+  
+  75%{
+    transform: rotate(15deg);
+  }
+
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.BannerSessao{
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 5em 2em 5em 2em;
+  .Banner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: space-around;
+    align-items: center;
+
+    .Textos{
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      width: calc(50%);
+      min-width: 540px;
+      max-width: 550px;
+      font-family: 'Playfair Display', serif;
+      h1{
+        transition: 2s ease-in-out;
+        animation: Pisca 15s infinite;
+        font-size: 6em;
+        
+      }
+      p{
+        font-size: 1.5em;
+        transition: 2s ease-in-out;
+      }
+    }
+
+    .Imagens{
+      position: relative;
+      padding-right: 3em;
+      .ImgPrincipal{
+        animation: Girar 5s infinite ;
+        transition: 2s ease-in-out;
+        filter: saturate(290%);
+      }
+      .ImgSecundaria{
+        transition: 2s ease-in-out;
+        position: absolute;
+        width: 17em;
+        border-radius: 60%;
+        right: 0px;
+        bottom: 0px;
+        transition: 1s ease-in-out;
+      }
+      .ImgSecundaria:hover{
+        width: 20em;
+        transition: 2s ease-in-out;
+        animation: balanga 20s infinite;
+      }
+    }
+  }
+}
+
+@media (max-width: 744px) {
+  .BannerSessao{
+    .Banner{
+      .Textos {
+        min-width: 300px;
+        margin: 20px;
+        gap: 5px;
+        h1{
+          font-size: 3.2em;
+        }
+        P{
+          font-size: 1.2em;
+        }
+      }
+      
+      .Imagens{
+        transition: 2s ease-in-out;
+        .ImgPrincipal{
+          width: calc(110%);
+          transition: 2s ease-in-out;
+        }
+        .ImgSecundaria{
+          transition: 2s ease-in-out;
+          width: calc(60%);
+        }
+      }
+    }
+  }
+}

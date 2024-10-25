@@ -1,0 +1,14 @@
+.sessaoFiltrada{
+  border-top: 5px solid var(--fonte-secundaria);
+  h2{
+    padding-left: 10px;
+  }
+  .filtrados{
+    display: flex;
+    gap: 10px;
+    padding: 5px 15px 5px 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

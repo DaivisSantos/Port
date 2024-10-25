@@ -1,0 +1,48 @@
+.Card {
+  width: 100%;
+  max-width: 320px;
+  min-width: 250px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  border-radius: 15px 15px 10px 10px;
+  background-color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transform: translate(0, -1rem);
+}
+.Card .Card .CardSecond {
+  width: 200px;
+}
+.Card .ImgCard img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+.Card .titulo {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--azul-escuro);
+  line-height: 1.75rem;
+  margin: 1.5rem 0 1.75rem;
+}
+.Card .BtnCard {
+  border-radius: 25px;
+  color: var(--branco);
+  padding: 5px;
+  margin-bottom: 1em;
+  border: solid 3px var(--azul-medio);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--azul-medio);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.Card .BtnCard:hover {
+  padding: 5px 10px 5px 10px;
+}
+
+@media (max-width: 740px) {
+  .Card {
+    width: 286px;
+  }
+}/*# sourceMappingURL=Posts.module.css.map */

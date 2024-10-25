@@ -1,0 +1,16 @@
+.Rodape{
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    
+    
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    
+    background-color: var(--azul-escuro);
+    color: var(--branco)
+  }
+}

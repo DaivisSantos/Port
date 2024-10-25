@@ -1,0 +1,164 @@
+:root{
+  --cor-prima: #bebebe;
+  --cor-secun: #888888;
+}
+
+@keyframes Pisca {
+  0% {
+    text-shadow: 0 0 10px var(--cor-prima), 
+                 0 0 15px var(--cor-prima), 
+                 0 0 20px var(--cor-secun), 
+                 0 0 25px var(--cor-prima), 
+                 0 0 30px var(--cor-prima);
+  }
+
+  25% {
+    text-shadow: none;
+  }
+
+  50% {
+    text-shadow: 0 0 10px var(--cor-prima), 
+                 0 0 15px var(--cor-prima), 
+                 0 0 20px var(--cor-secun), 
+                 0 0 25px var(--cor-prima), 
+                 0 0 30px var(--cor-prima);
+  }
+
+  75% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: 0 0 10px var(--cor-prima), 
+                 0 0 15px var(--cor-prima), 
+                 0 0 20px var(--cor-secun), 
+                 0 0 25px var(--cor-prima), 
+                 0 0 30px var(--cor-prima);
+  }
+}
+
+@keyframes Girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes balanga {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.BannerSessao {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 5em 2em 5em 2em;
+}
+
+.BannerSessao .Banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.BannerSessao .Banner .Textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 50%;
+  min-width: 540px;
+  max-width: 550px;
+  font-family: "Playfair Display", serif;
+}
+
+.BannerSessao .Banner .Textos h1 {
+  transition: 2s ease-in-out;
+  animation: Pisca 15s infinite;
+  font-size: 6em;
+}
+
+.BannerSessao .Banner .Textos p {
+  font-size: 1.5em;
+  transition: 2s ease-in-out;
+}
+
+.BannerSessao .Banner .Imagens {
+  position: relative;
+  padding-right: 3em;
+}
+
+.BannerSessao .Banner .Imagens .ImgPrincipal {
+  animation: Girar 5s infinite;
+  transition: 2s ease-in-out;
+  filter: saturate(290%);
+}
+
+.BannerSessao .Banner .Imagens .ImgSecundaria {
+  transition: 2s ease-in-out;
+  position: absolute;
+  width: 17em;
+  border-radius: 60%;
+  right: 0px;
+  bottom: 0px;
+  transition: 1s ease-in-out;
+}
+
+.BannerSessao .Banner .Imagens .ImgSecundaria:hover {
+  width: 20em;
+  transition: 2s ease-in-out;
+  animation: balanga 5s infinite;
+}
+
+@media (max-width: 744px) {
+  .BannerSessao .Banner .Textos {
+    min-width: 300px;
+    margin: 20px;
+    gap: 5px;
+  }
+
+  .BannerSessao .Banner .Textos h1 {
+    font-size: 3.2em;
+  }
+
+  .BannerSessao .Banner .Textos P {
+    font-size: 1.2em;
+  }
+
+  .BannerSessao .Banner .Imagens {
+    transition: 2s ease-in-out;
+  }
+
+  .BannerSessao .Banner .Imagens .ImgPrincipal {
+    width: 110%;
+    transition: 2s ease-in-out;
+  }
+
+  .BannerSessao .Banner .Imagens .ImgSecundaria {
+    transition: 2s ease-in-out;
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=Banner.module.css.map */

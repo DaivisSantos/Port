@@ -1,0 +1,29 @@
+.SessaoCabecalho{
+  header{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+
+    background-color: rgb(43, 43, 43);
+    font-size: 1.25rem;
+    font-weight: 400;
+    
+    padding: 20px;
+    transition: 2s ease-in-out;
+    
+    .LinkP{
+      text-decoration: none;
+      transition: 2s ease-in-out;
+      :hover{
+        transition: 2s ease-in-out;
+        
+      }
+      
+    }
+
+    .LinkPDestacado{
+      transition: 2s ease-in-out;
+      text-decoration: underline;
+    }
+  }
+}

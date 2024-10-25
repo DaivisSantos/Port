@@ -1,0 +1,28 @@
+@keyframes Cresce {
+  0%{
+    text-decoration-thickness: 0px;
+  }
+  100%{
+    text-decoration-thickness: 3px;
+  }
+}
+
+.LinkP{
+  text-decoration: none;
+  transition: 2s ease-in-out;
+  color: var(--branco);
+  :hover{
+    transition: 0.5s ease-in-out;
+    
+  }
+  
+}
+
+.LinkPDestacado{
+  color: var(--azul-medio);
+  transition: 2s ease-in-out;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  animation: Cresce 0.5s;
+  
+}
